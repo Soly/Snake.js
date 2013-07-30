@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+		<title>Snake</title>
+		<style>
+			html {
+				height: 100%;
+			}
+			body {
+				height: inherit;
+			}
+			.field {
+				background: #35dc54;
+				margin: auto;
+				height: inherit;
+			}
+			.snake {
+				background: #9a3153;
+				width: 10px;
+				height: 10px;
+				position: relative;
+				top: 50%;
+				left: 50%;
+			}
+		</style>
+		<script src='jquery-1.9.1.js' type='text/javascript'></script>
+		<script type='text/javascript'>
+			$snake = $('.snake');
+			$field = $('.field');
+			console.log($snake.position());
+			while($snake.position().left != $field.position().left) {
+				$snake.position().left--;
+			}
+		</script>
+	</head>
+	<body>
+		<div class="field">
+			<div class="snake"></div>
+		</div>
+	</body>
+</html>
